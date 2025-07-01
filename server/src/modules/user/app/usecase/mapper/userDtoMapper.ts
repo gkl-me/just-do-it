@@ -1,4 +1,4 @@
-import { User } from "../../domain/entities/Entity";
+import { User } from "../../../domain/entities/Entity";
 import { LoginResponseDto } from "../dto/UserDto";
 
 export class UserMapper{

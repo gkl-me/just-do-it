@@ -1,9 +1,9 @@
 import { inject, injectable } from "tsyringe";
-import { IUserRepository } from "../../domain/repository/IUserRepository";
+import { IUserRepository } from "../../../domain/repository/IUserRepository";
 import { LoginUserDto, LoginResponseDto } from "../dto/UserDto";
 import { IAuthUseCase } from "../interface/IAuthUseCase";
 import { UserMapper } from "../mapper/userDtoMapper";
-import { UserRepository } from "../../infra/InMem/UserRepository";
+import { UserRepository } from "../../../infra/InMem/UserRepository";
 
 @injectable()
 export class AuthUseCase implements IAuthUseCase{

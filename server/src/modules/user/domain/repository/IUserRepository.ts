@@ -2,6 +2,6 @@ import { User } from "../entities/Entity";
 
 
 export interface IUserRepository{
-    findById:(id:string) => User|null;
+    findById:(id:number) => User|null;
     findByEmail:(email:string) => User|null;
 }

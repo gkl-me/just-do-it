@@ -1,4 +1,4 @@
-import { User } from "../../domain/entities/Entity"
+import { User } from "../../../domain/entities/Entity"
 
 export interface LoginUserDto{
     email:string,
