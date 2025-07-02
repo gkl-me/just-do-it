@@ -5,4 +5,9 @@ export interface LoginUserDto{
     password:string
 }
 
+export interface SearchUserDto{
+    email:string
+}
+
+export type SearchUseResponseDto = Omit<User,'password'>
 export type LoginResponseDto  = Omit<User,'password'>
