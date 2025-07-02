@@ -1,9 +1,11 @@
 import { container } from "tsyringe"
 import { UserRepository } from "./infra/InMem/UserRepository"
 import { IUserRepository } from "./domain/repository/IUserRepository"
-import { IAuthUseCase } from "./usecase/interface/IAuthUseCase"
-import { AuthUseCase } from "./usecase/usecase/AuthUseCase"
+import { IAuthUseCase } from "./app/usecase/interface/IAuthUseCase"
+import { AuthUseCase } from "./app/usecase/usecase/AuthUseCase"
 import { AuthController } from "./interface/controller/authController"
+import { IToken } from "./app/providers/interface/IToken"
+import { Jwt } from "./infra/providers/Jwt"
 
 export const registerUserModule = () => {
     //register user repo
@@ -18,6 +20,10 @@ export const registerUserModule = () => {
     
     container.register<AuthController>('AuthController',{
         useClass:AuthController
+    })
+
+    container.register<IToken>('Jwt',{
+        useClass:Jwt
     })
 
 }
